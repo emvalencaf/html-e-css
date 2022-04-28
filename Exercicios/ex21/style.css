@@ -1,0 +1,66 @@
+body{
+    font: normal normal 1em Arial,Helvetica, sans-serif;
+    background-color: dimgray;
+    margin:0px;/*margin-top:0px;margin-right: 0px; margin-bottom: 0px; margin-left: 0px;
+    Isso faz com que a caixa body fique coladinho
+    */
+}
+
+/*Parte do cabeçalho acima*/
+header{
+    background-color: antiquewhite;
+    padding: 10px; /*padding-top:10px; padding-right: 10px; padding-bottom: 10px; padding-left:10px*/
+    margin: 10px;/*margin-top:10px;margin-right: 10px; margin-bottom: 10px; margin-left: 10px;*/
+    box-shadow: inset 0px 1px 6px 2px rgb(0 0 0 / 49%);
+}
+
+/*Parte do menu de navegação abaixo*/
+nav{
+    background-color: lightslategray;
+    padding: 3px;
+    box-shadow: inset -1px -1px 9px 10px lightblue;/*deslocamento horizontal, deslocamento vertical, embaraçamento (blur), espalhamento da sombra, cor da sombra*/
+}
+nav>a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    margin:30px;
+}
+nav>a:hover{
+    text-decoration:underline;
+
+}
+/*Parte do menu de navegação acima*/
+
+/*Parte do cabeçalho acima*/
+
+/*Parte do conteúdo abaixo*/
+
+main{
+    background-color:whitesmoke;
+    padding: 10px; /*padding-top:10px; padding-right: 10px; padding-bottom: 10px; padding-left:10px*/
+    margin: 10px;/*margin-top:10px;margin-right: 10px; margin-bottom: 10px; margin-left: 10px;*/
+    border-radius:50px 20px;/*border-top-left-radius; border-top-right-radius; border-bottom-right-radius; border-bottom-left-radius/*/
+    box-shadow: 3px 3px 11px 3px rgba(0, 0, 0, 0.561);
+}
+article{
+    background-color:lightgray;
+}
+article>aside{
+    background-color:rgb(193, 193, 193);
+
+}
+
+/*Parte do conteúdo acima*/
+
+footer{
+    background-color: black;
+    color:white;
+    text-align:center;
+    padding: 4px;/*padding-top:1px; padding-right: 1px; padding-bottom: 1px; padding-left:1px*/
+    margin:0px;/*margin-top:0px;margin-right: 0px; margin-bottom: 0px; margin-left: 0px;*/
+
+}
+footer>p{
+    margin:0px;
+}

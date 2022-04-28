@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex10| Links</title>
+</head>
+<body>
+    <h1><em>Link</em></h1>
+    <h2>Usandos <em>link</em> externos</h2>
+    <p>
+        O <em>link</em> externos são usados para dá acesso a páginas externas ao <em>sites</em>.
+        Por exemplo: <a href="https://www.youtube.com.br" target="_blank" rel="external">clique aqui</a> para ir ao YouTube.
+    </p>
+<pre><code>
+    &lt;a href="https://wwww.(site).com.br" target="_blank" rel="external"&gt;Texto&lt;/a&gt;
+</code></pre>
+    <p>
+        É sempre recomendável quando for colocar <em>links</em> externos que se coloque a propriedade target="_blank" e rel="external" para manter na navegação o seu <em>site</em>. Dessa forma, evitando que o cliente clique no <em>link</em> e nunca mais volte ao seu <em>site</em>.
+    </p>
+    <p>
+        Às vezes, quando não se quer associar o site ao site que estar se linkando pode-se atribuir ao atributo rel o "nofollow". O efeito prático é em relação aos mecanismos de buscas que não irão associar o <em>link</em> externo ao site. Isto é usado principalmente quando o dono do site não dá aval ao site linkado.
+    </p>
+<pre><code>
+    &lt;a href="https://wwww.(site).com.br" target="_blank" rel="nofollow"&gt;Texto&lt;/a&gt; 
+</code>
+</pre>
+    <h2>Usando <em>link</em> internos</h2>
+    <h3>Documento em uma mesma página</h3>
+    <p>
+        O <em>link</em> interno faz uma relação com outra página que está dentro do mesmo servidor do site e em uma relação interna. É sempre importante acrescer ao target o atributo "_self" isso impedirá que se abram várias abas do mesmo <em>site</em>. Nota-se que o <em>default</em> é o target="_self".
+<pre><code>
+    &lt;a href="nome_.html" rel="next" target="_self"&gt;Clique aqui&lt;/a&gt; para acessar a 2ª página
+</code></pre>
+        Perceba que se o arquivo html da 2ª página estiver na mesma pasta do primeiro arquivo html não será necessário colocar toda a url. Ao atribuir o rel o atributo next estar-se determinando que a outra página html é a seguinte a ele.
+        Por exemplo: <a href="pag02.html" rel="next" target="_self">Clique aqui para acessar a página 2 do ex10</a>
+    </p>
+    <h3>Documento em uma sub-pasta em relação ao arquivo html</h3>
+    <p>
+        Para <em>link</em> interno a um arquivo que encontra-se em uma sub-pasta em relação ao arquivo deve-se fazer da seguinte forma:
+<pre><code>
+    &lt;a href="subpasta/nome_.html" rel="next" target="_self"&gt;Clique aqui&lt;/a&gt; para acessar a 2ª página   
+</code></pre>
+    Por exemplo: <a href="noticias/pag03.html" target="_self">Clique aqui</a> para ir a página 03.
+    </p>
+    <h3>Documento em uma pasta anterior em relação ao html</h3>
+    <p>
+        Para linkar o arquivo html a um arquivo html que encontra-se numa página anterior deve-se atribuir ao href acrescer "../" até aparecer o documento html que deseja se linkar em uma página anterior   </p>
+<pre><code>
+    &lt;a href="../nome.html" rel="next" target="_self"&gt;Clique aqui&lt;/a&gt; para acessar a 2ª página
+</code></pre>
+    <h2><em>link</em> para <em>download</em></h2>
+    <p>
+        Para baixar um arquivo usando um <em>link</em> interno atribuir ao href o nome do arquvio e colocar na propriedade <em>download</em> o nome do arquivo.
+<pre><code>
+    &lt;a href="livro/meulivro.pdf" download="meulivro.pdf"&gt; Clique aqui &lt;/a&gt; para baixar o pdf.
+</code></pre>
+        Às vezes, o navegador não irá reconhecer para fazer <em>download</em> apenas com isso, por essa razão, pode-se acrescer a propriedade <em>type</em> atribuição <em>application/</em> a extensão do arquivo. Para saber se a extensão é cabível basta acessar esse <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank">site</a>.
+<pre><code>
+    &lt;a href="livro/meulivro.pdf" download="meulivro.pdf" type="application/pdf"&gt; Clique aqui &lt;/a&gt; para baixar o pdf.   
+</code></pre>
+        <br>
+        <a href="livro/meulivro.pdf"download="meulivro.pdf"type="application/pdf">Clique aqui</a> para baixar o pdf.
+        <br>
+        <a href="livro/meulivro.zip"download="meulivro.zip"type="application/zip">Clique aqui</a> para baixar o zip.
+    </p>
+</body>
+</html>

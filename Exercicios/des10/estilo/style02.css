@@ -1,0 +1,282 @@
+/*Esse documento corresponde ao desafio 10 que já foi feito no android.html e style.css.
+Nesse documento será feito junto com o Profº. Guanabara.*/
+
+/*Seção de Regras*/
+@charset "UTF-8";
+@font-face {
+    font-family:'Indroid';
+    src: url(../fontes/idroid.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/*Seção de Regras*/
+
+/*Seção de variáveis*/
+/*
+paleta de cores do mais claro para o mais escuro
+#8FF7C1
+#45F59B
+#36C27A
+#21754A
+#44755C
+#063d1e
+*/
+:root{
+    --cor0:#8FF7C1;
+    --cor1:#45F59B;
+    --cor2:#36C27A;
+    --cor3:#21754A;
+    --cor4:#44755C;
+    --cor5:#063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque:'Bebas Neue', cursive;
+    --fonte-android: Indroid, cursive;
+}
+
+/*Seção de variáveis*/
+
+*{
+    margin:0px;
+    padding:0px;
+    
+}
+
+body{
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+
+a.externo::after{
+    content:'\1F517';
+    text-shadow:none;
+    text-decoration:none;
+}
+
+header{
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    min-height: 150px;
+    text-align: center;
+}
+
+header>h1{
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-weight: normal;
+    font-size: 3em;
+    text-shadow: 4px 5px 3px rgba(0, 0, 0, 0.58);
+    padding-top:30px;
+    margin-bottom:20px;
+}
+/* É importante notar que se colocar um margin-top ao invés do padding-top irá ocorrer um erro haja visto que a margem irá transbordar a caixa do header
+
+Por sua vez, o padding-top por ser um distanciar o conteúdo do <h1> da sua borda acaba não transbordando a borda do <header>
+*/
+header>p{
+    color:white;
+    font-family:var(--fonte-padrao);
+    font-weight: normal;
+    font-size:1.2em;
+    max-width:500px;
+    padding: 0px 10px 20px 10px;
+    margin:0px auto 0px auto;
+}
+
+/*Por ter recebido o max-width torna-se necessário colocar o margin para centralizar, visto que tornou-se um elemento com características de um bloco*/
+
+nav{
+    background-color: var(--cor5);
+    padding: 10px;
+    
+    box-shadow:0px 4px 0px 0px rgba(0, 0, 0, 0.078);
+}
+
+nav>a{
+    color: var(--cor0);
+    font-weight:bold;
+    text-decoration:none;
+    padding: 10px;
+
+    border-radius:5px;
+    transition-duration:0.3s;
+}
+/*Nesse caso, a propriedade transition-duration atribui um valor para o período de tempo aplicar os efeitos da pseudoclasse a:hover */
+nav>a:hover{
+    background-color: var(--cor3);
+    color: var(--cor5);
+
+}
+
+main{
+    background-color: white;
+
+    min-width:320px;
+    max-width: 800px;
+    margin: 0px auto 30px auto;
+
+    padding: 20px;
+
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.468);
+}
+
+main h1{
+    color:var(--cor5);
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size:1.8em;
+}
+
+main h2{
+    color:var(--cor4);
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size:1.3em;
+    text-indent: 8px;
+    background-image: linear-gradient(to right, var(--cor1),transparent 42%);
+
+    border-top-left-radius: 20px;
+}
+
+main p{
+    font-size:1em;
+    text-align: justify;
+    text-indent: 30px;
+    line-height:2em;
+
+    margin: 15px 0px 15px 0px;
+}
+/*A propriedade line-height determina o espaçamento vertical entre-linhas. No caso, foi atribuído o espaçamento de 1em.*/
+
+main strong{
+    color: var(--cor4);
+    font:normal bold 0.8em var(--fonte-android);
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.558);
+
+}
+
+main a{
+    color: var(--cor5);
+    font: normal bold 0.7em var(--fonte-android);
+    font-weight:bold;
+    text-decoration: none;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.558);
+    padding: 2px 6px;
+    transition-duration: 0.5s;
+}
+
+main a:hover{
+    text-decoration: underline;
+    color:var(--cor4);
+}
+
+main img{
+    width:100%;
+}
+
+img.pequena{
+    max-width:350px;
+
+    display:block;
+    margin: 0px auto 0px auto;
+}
+/*
+    o seletor img.pequena é necessário para tornar a img do bugdroid centralizada e atribuído um tamanho apropriado a tela. Por essa razão, ao width da imagem foi atribuído o valor máximo de 350px (assim a imagem não se expandirá demais e perderá resolução em telas maiores), bem como, colocado a margin em auto.
+    Em default os elementos img são <div> do tipo inline, por essa razão, não basta atribuir o valor auto para margin para centraliza-lo. Para isso é necessário atribuir ao display o valor block para tornar a <img> uma <div> do tipo block.
+*/
+
+main div.video{
+    background-color: var(--cor5);
+
+    padding: 20px;
+    margin: 0px -20px 30px -20px;
+
+    padding-bottom: 56.90%;
+
+    position:relative;
+}
+/* A propriedade margin recebeu o valor -20px no margin-right e -20px na margin-left para expandir e colar na caixa do main*/
+
+main div.video > iframe{
+    position: absolute;
+    top:5%;
+    left:5%;
+
+    width: 90%;
+    height: 90%;
+}
+
+aside{
+    background-color: var(--cor1);
+    padding: 10px;
+    
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.19);
+}
+
+aside > h3{
+    background-color: var(--cor4);
+    color:white;
+    padding: 5px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+/*
+A margin recebeu top, right e left -10px para expandir o background-color e preencher até a caixa do <aside>.
+*/
+
+aside ul{
+    list-style-type: "\2714\00A0\00A0";
+    list-style-position: inside;
+    columns: 2;
+}
+/*A propriedade list-style-type recebeu o valor corrrespondente ao código do emoji "check" (\2714) e dois espaços (\00A0).
+
+Em HTML5 usa-se-ia o &#(código do emoji) para apresentar o emoji.
+
+Observa-se que não são todos os browser que aceitam essa declaração atribuída ao list-style-type.
+
+Na minha tentativa sozinho eu usei o pseudoelemento ::before e atribuir a propriedade content com a cópia do emoji "check". Funcionou.
+
+Ademais, o default dos elementos de lista é ficar outside da caixa. Por essa razão, deve-se colocar o list-style-position: inside para que ele apareça dentro da caixa do <ul>.
+
+A propriedade columns atribuiu 2 colunas aos elementos (<li>) dentro do <ul>
+*/
+
+main abbr{
+    text-decoration: none;
+}
+main abbr:hover{
+    color:var(--cor0);
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.456);
+}
+footer{
+    background-color:var(--cor5);
+    color:white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer a{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: var(--cor1);
+
+}
+
+footer abbr{
+    text-decoration: none;
+}
+footer abbr:hover{
+    color:var(--cor0);
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.456);    
+}

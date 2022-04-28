@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex12 | Vídeo</title>
+</head>
+<body>
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>
+        Por meio da seguinte expressão é possível, usando o HTML5, hospedar vídeos no próprio servidor
+<pre><code>
+    &lt;video src="midia/nome.extensoa" controls autoplay&gt; &lt;/video&gt;
+</code></pre>
+        Por exemplo:
+    </p>
+    <video src="midia/meuvideo.mp4" controls autoplay width="400px" height="400px"></video>
+    <p>
+        A segunda forma, e também a que permite melhor acessibilidade, é essa:
+<pre><code>
+    &lt;video controls poster="imagens/imagem.png"&gt;
+        &lt;source src="" type="video/(extensão)"&gt;
+        &lt;!--repete o source por outros tipos de vídeos para garantir a compatibilidade--&gt;
+    &lt;/video&gt;
+</code></pre>
+    </p>
+    <video controls wdith="400px" height="400px" poster="imagens/imagem.png"">
+        <source src="midia/meuvideo.m4v" type="video/mp4">
+        <source src="midia/meuvideo.ogv" type="video/ogg">
+        <source src="midia/meuvideo.webm" type="video/webm">
+        <p>Seu navegador não tem compatibilidade com reprodução de videos</p>
+    </video>
+    <p>
+        Da forma acima, há maiores chances de compatiblidade entre o <em>browser</em> do cliente e os vídeos hospedados no servidor. Isso se dá em virtude da quantidade de formatos de vídeos. Ademais, também é possível colocar uma <em>thumbnail</em> para o vídeo usando o parâmetro poster. Se o parâmetro poster for omitido aparecerá uma imagem qualquer do vídeo.
+    </p>
+    <h1>Inserindo vídeos hospedados em serviços de vídeo</h2>
+    <p>
+        As técnicas anteriores para inserir um vídeo no site são bastante custosas para o dono do site pois acabam consumindo muito o serviço de banda. Por exemplo: um vídeo de 8 MB acessado 1000 vezes, consome 7.8 GB de banda do dono do site. Isso é bastante caro, por ser também desnecessário. Por essa razão, deve-se evitar ao máximo colocar vídeos hospedados no próprio servidor.
+    </p>
+    <p>
+        Uma opção mais adequada é inserir vídeos hospedados em outros servidores (vídeos externos ao site), como por exemplo: o YouTube. Para pegar o código HTML5 do vídeo do YouTube basta ir em compartilhar e clicar em incorporar lá no vídeo do youtube.
+
+    </p>
+    <iframe width="400" height="315" src="https://www.youtube.com/embed/8Lox1B5_z-E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex09| Formatação de texto</title>
+</head>
+<body>
+    <h1>Outras formatações</h1>
+    <h2>Codigo-fonte</h2>
+    <p>O comando document.getlemntById('teste') é escrito em linguagem JavaScript.
+        A exibição acima deixa um tanto confuso porque a fonte não é monospace.
+    Para isso coloca-se &lt;code&gt;, fica da seguinte forma: <br>
+    <code>document.getlemntById('teste')</code>
+    <br>
+    Exemplo de uma código de linguagem python:<br>
+    <code>
+        num = int(input('Digite um número'))
+        if num % 2 == 0
+            print(f'O número {num} é par')       
+        else
+            print(f'O número {num}é ímpar')
+    </code>
+    <br>
+    Observa-se que a tag &lt;code&gt; apenas troca a fonte para uma fonte com monospace. A indentação não é colocado para isso e necessário envolver a tag  &lt;code&gt;  com a tag  &lt;pre&gt; 
+    
+    <pre><code>
+num = int(input('Digite um número'))
+if num % 2 == 0
+    print(f'O número {num} é par')       
+else
+    print(f'O número {num}é ímpar')
+    </code></pre>
+    Que irá preservar a indentação do código
+</p>
+<h2>Criando as citações</h2>
+<p>como diria o pai de um amigo:<q> o computador é um burro muito rápido.</q>
+<br>
+Basta usar a tag &lt;q&gt; que é uma tag semântica para citações simples
+</p>
+<h2>Citações completas</h2>
+<p>
+    Segundo Myiamoto Musashi, no livro dos cinco anéis:
+    <blockquote cite="https://artedaguerra.webnode.com.br/_files/200001147-d451ad645e/GORIN%20NO%20SHO%20-%20O%20Livro%20dos%20Cinco%20An%C3%A9is%20-%20Myiamoto%20Musashi.pdf">
+        there is nothing outside of yourself that can ever enable you to get better, stronger, richer, quicker, or smarter. Everything is within. Everything exists. Seek nothing outside of yourself.
+    </blockquote>
+    A &lt;blockquote&gt; cria um bloco que dá um espaçamento a citação e é possível atribuir a tag o atributo cite para linkar com o link do livro para ajudar os algoritmos de busca (o cite não aparecerá no documento html5)
+</p>
+<h2>Abreviações</h2>
+<p>
+    Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>. Usando a tag &lt;abbr&gt;
+</p>
+<h2>Texto invertido</h2>
+<p>
+    <bdo dir="rtl">Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>.</bdo> <br>
+    Basta usar a tag &lt;bdo dir="rlt"&gt;, rlt = right to left.
+</p>
+</body>
+</html>

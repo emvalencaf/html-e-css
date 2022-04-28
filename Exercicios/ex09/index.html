@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>ex09| Listas</title>
+</head>
+<body>
+    <h1>Trabalhando com Listas</h1>
+    <h2>Listas Ordenadas</h2>
+    <p>
+        As listas ordenadas (&lt;ol&gt;) são usadas para ordenar os itens (&lt;li&gt;) e a <em>tag</em> das listas ordenadas(&lt;ol&gt;) é possível atribuir a propriedade <em>type</em> 3 tipos de listas: numérico, letra e algorismos romanos.
+<pre><code>&lt;ol type="(1/a/A/I/i)"&gt;</code></pre>
+        É possível também escolher em qual número/algorismo romano/número de letra a lista vai começar ao atribuir a propriedade <em>start</em> um número:
+<pre><code>&lt;ol type="(1/a/A/I/i) start="(número)""&gt;</code></pre>
+        Por exemplo: Lista Ordenada por letras que começa pela 4ª letra:
+    </p>
+    <ol type="A" start="4">
+        <li>Acordar</li>
+        <li>Tomar café</li>
+        <li>Escoar os dentes</li>
+        <li>Arrumar para o trabalho</li>
+    </ol>
+    <h2>Listas não-Ordenadas</h2>
+    <p>
+        As listas não-ordenadas(&lt;ul&gt;) são aquelas em que a ordem dos itens não influencia a lista.
+        Também é possível atribuir a propriedade <em>type</em> da <em>tag</em> (&lt;ul&gt;) qual é o tipo do marcador dos itens (&lt;li&gt;) que podem ser: disk, circle ou square.
+<pre><code>&lt;ul type="(circle/square/disk)"&gt;</code></pre>
+        Por exemplo: Lista não-Ordenada do tipo <em>square</em>:
+    </p>
+    <ul type="square">
+        <li>Pão</li>
+        <li>Lite</li>
+        <li>Café</li>
+        <li>Manteiga</li>
+    </ul>
+    <h2>EXERCÍCIO 09/B</h2>
+    <h3>Juntando listas:</h3>
+    <p>É possível aninhar diferentes tipos de listas.Usando o seguinte expressão:
+<pre><code>
+    &lt;h4&gt;Minhas matérias favoritas&lt;/h4&gt;
+    &lt;ol type="1"&gt;
+        &lt;li&gt;Direito Empresarial&lt;/li&gt;
+        &lt;ul type="circle"&gt;
+            &lt;li&gt;Contratos&lt;/li&gt;
+            &lt;li&gt;Societário&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;li&gt;Direito Civil&lt;/li&gt;
+    &lt;/ol&gt;
+</code></pre>
+    </p>
+    <h4>Minhas materias favoritas</h4>
+    <ol type="1">
+        <li>Direito Empresarial</li>
+        <ul>
+            <li>Contratos</li>
+            <li>Direito Societário</li>
+        </ul>
+        <li>Direito Civil</li>
+    </ol>
+    <p>Outra forma:</p>
+    <h4>Meus jogos favoritos</h4>
+    <ul type="disk">
+        <li>Jogos de PC:</li>
+        <ol type="A">
+            <li>Bioshock</li>
+            <li>The Witcher 3</li>
+            <li>Assassins Creed: Valhalla</li>
+            <li>Final Fantasy 7 remake</li>
+        </ol>
+        <li>Playstation 3:</li>
+        <ol type="I">
+            <li>Skyrim</li>
+            <li>Assassins Creed IV:Black Flag</li>
+            <li>God of War: Collections</li>
+        </ol>
+        <li>Playstation 2:</li>
+        <ol type="a">
+            <li>God of War 1</li>
+        </ol>
+        <li>GameBoy:</li>
+        <ol type="i">
+            <li>Pokemon Crystal</li>
+            <li>Pokemon Yellow</li>
+            <li>Pokemon Gold</li>
+            <li>Pokemon Esmerald</li>
+            <li>Pokemon Ruby</li>
+        </ol>
+    </ul>
+    <h2>Lista de Definição</h2>
+    <p>
+        O último tipo de lista possível de se construir usando HTML5 é a lista de definição. Para criar uma lista de definição usa-se a <em>tag</em>&lt;dt&gt; que marca qual será o termo e depois a <em>tag</em> &lt;dd&gt; que marca qual é a definição do termo. Conforme segue a expressão
+<pre><code>
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;Linguagem de marcação para a criação do conteúdo de um site&lt;/dd&gt;
+</code></pre>
+    </p>
+    <h4>Exemplos de Definição</h4>
+    <dt><abbr title="HyperText Markup Language">HTML5</abbr></dt>
+    <dd>Linguagem de marcação para a criação de conteúdo de um site</dd>
+    <dt><abbr title="Cascading Style Sheets">CCS</abbr></dt>
+    <dd>Linguagem de marcação para a criação de <em>design</em> de um site</dd>
+    <dt>JavaScript</dt>
+    <dd>Linguagem de programação para a criação de interatividade de um site</dd>
+</body>
+</html>

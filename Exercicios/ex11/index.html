@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex11 | Multimídia de Imagens</title>
+</head>
+<body>
+    <h1>Imagens dinâmicas</h1>
+    <p>Tente abrir esse site em vários dispositivios diferentes ou simplesmente aumente e diminua o tamanho do seu navegador</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="imagem flexível">
+    </picture>
+    <p>
+        Para fazer essas imagens dinâmicas usando a HTML5 é preciso três imagens de três tamanhos diferentes. No caso acima foram usados:
+        <ol><li>300x300px</li><li>700x700px</li><li>1000x1000px</li></ol>
+        Dessa forma, por meio do código HTML o <em>browser</em> vai exibir a imagem com o <em>width</em> (largura) adequada ao tamanho da tela do dispositivo.<br>
+        O código segue a seguinte expressão usando a <em>tag</em> &lt;img&gt; aninhada a <em>tag</em> &lt;picture&gt;:
+<pre><code>
+&lt;picture&gt;
+    &lt;source media="(max-width: 750px) src="imagens/foto-p.png" type="image/png"&gt;
+    &lt;source media="(max-width: 1050px) src="imagens/foto-m.png" type="image/png"&gt;
+    &lt;img src="imagens/foto-g.png" alt="imagem flexível"&gt;
+&lt;/picture&gt;
+</code></pre>
+        Como se pode a imagem base trabalhada é a de 1000x1000px. Portanto, se fosse alterado a ordem das <em>tags source</em> a imagem de 300x300px não iria aparecer.Dessa forma a ordem a ser seguida, nesse código é:
+        <ol>
+            <li>source imagem menor</li>
+            <li>source imagem média</li>
+            <li>imagem base</li>
+        </ol>
+    </p>
+    <picture>
+        <source media="(min-width: 1000px)" srcset="imagens/foto-g.png" type="image/png">
+        <source media="(min-width: 700px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-p.png" alt="imagem flexível">
+    </picture>
+    <p>
+        Por sua vez, também é possível fazer da maneira inversa ao trabalhar-se atribuido ao source media o min-width conforme visto acima:
+<pre><code>
+&lt;picture&gt;
+    &lt;source media="(min-width: 100px) src="imagens/foto-p.png" type="image/png"&gt;
+    &lt;source media="(min-width: 700px) src="imagens/foto-m.png" type="image/png"&gt;
+    &lt;img src="imagens/foto-p.png" alt="imagem flexível"&gt;
+&lt;/picture&gt;
+</code></pre>
+        Desta forma, a imagem base é a imagem de 300x300px e, se fosse alerada a ordem das <em>tags source</em> a imagem de 1000x1000px não iria aparecer. Dessa forma a ordem a ser seguida, é:
+        <ol>
+            <li>source imagem maior</li>
+            <li>source imagem média</li>
+            <li>imagem base</li>
+        </ol>
+    <h1>Reproduzir áudios</h1>
+    <p>Há duas formas de reproduzir um áudio usando HTML5 a primeira é:</p>
+    <ol>
+        <li>Usando a <em>tag</em> &lt;audio&gt;:</li>
+        <audio src="media/Breeze - Telecasted.mp3" controls autoplay></audio>
+<pre><code>
+&lt;audio src="(url da media)" controls autoplay&gt;&lt;/audio&gt;
+</code></pre>
+        <p>Perceba que nem todo <em>browser</em> é compatível com essa <em>tag</em> ou reproduz todos os formatos de áudio. Os formatos mais aceitos são .mp3, .wav e .ogg</p>
+
+        <li>Outra forma é:</li>
+        <audio preload="metadata" autoplay controls>
+            <source src="media/Breeze - Telecasted.mp3" type="audio/mpeg">
+<!--        <source src="media/Breeze - Telecasted.ogg" type="audio/ogg"
+            <source src="media/Breeze - Telecasted.wav" type="audio/wav"
+            <p>Infelizmente seu navegador não consegue reroduzir áudio <a href="url">Clique aqui para baixar o arquivo MP3</a>
+        O browser primeiro tentará carregar o arquivo mp3, não conseguindo tentará carregar o ogg e, por último, o wav.
+        Isso aumentará a acessibilidade do site por todos os navegadores que não suportem o formato mp3.
+        -->
+        </audio>
+<pre><code>
+&lt;audio preload="metadata" autoplay controls&gt;
+    &lt;source src="(url)" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+</code></pre>
+        <p>
+            Essa segunda forma de acrescer áudio ao site usando HTML5 torna o áudio compatível com uma maior variedade de <em>browsers</em>. Contudo, nem todos os <em>browsers</em> aceitam o formato .mp3, por essa razão pode-se colocar abaixo da <em>tag source</em> os outros dois tipos de áudios suportados (.wav e .ogg). Ademais, também é possível colocar uma mensagem para o caso do <em>browser</em> não suportar nenhuma das opções.
+        </p>
+        <p>
+            O preload na <em>tag</em> audio pode ser atribuido com "metadata", "auto" e "none".
+            <ul>
+                <li>metadata: carrega apenas as informações</li>
+                <li>auto: sem que o cliente clique o áudio já está carregado</li>
+                <li>none: somente quando o cliente clicar é que será carregado as informações e o arquivo</li>
+            </ul>
+            Também é possível atribuir o parâmetro loop a <em>tag</em> audio. O loop faz o audio se repetir infinitamente uma vez tocado.
+        </p>
+    </ol>
+</body>
+</html>
