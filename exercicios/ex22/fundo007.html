@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex22 | Alinhamento vertical</title>
+    <style>
+        #container{
+            position: relative;
+
+            height: 500px;
+            padding:20px;
+            background-color:purple;
+            background-image: url(imagens/target001.png);
+            background-size:100% 100%;
+        }
+
+        #conteudo{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            height:200px;
+            width: 400px;
+
+            background-color:yellow;
+            background-image: url(imagens/target001.png);
+            background-size:100% 100%;
+
+            transform:translate(-50%, -50%)
+        }
+/*Para centralizar o #conteudo no #container é necessário colocar a propriedade position, top, left e transform.
+
+O #container sempre terá o position:relative. Por sua vez, o #conteudo receberá o valor absolute.
+
+Com os atributos top e left com os valores de 50% o #conteudo ficará no right center do #container.
+
+Para centralizar verticalmente é necessário atribuir o transform:translate(-50%,-50%) para mover o #conteudo para o meio.
+
+É assim que se faz a centralização de caixas.
+
+*/
+    </style>
+</head>
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+</body>
+</html>
